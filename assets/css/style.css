@@ -1,0 +1,838 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Work Sans', sans-serif;
+    color: #2d2b3a;
+    font-size: 16px;
+}
+/*============COMMON-CLASSES===========*/
+.container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1270px;
+
+}
+.para{
+    font-size: 1rem;    
+    font-weight: 300;
+    line-height: 22px;
+    padding: 15px 0;
+}
+.head{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.all-head{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+    padding-top: 20px;
+
+
+}
+.title{
+    color: darkgray;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+.button{
+    padding: 8px 15px;
+    background-color: #5439F8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #f1f1f1;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    z-index:1;
+    transition: all 0.3s ease;
+  
+}
+.button:hover{
+    background-color: #dbbddb;
+    color: #5439F8;
+
+}
+
+.button::before{
+    content: " ";
+    width: 0;
+    height: 100%;
+    background-color: #5439F8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+
+}
+
+.button:hover:before{
+    background-color: #5439F8;
+    width: 100%;
+    opacity: 0.4;
+
+}
+
+
+
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*===========NAVIGATION==============*/
+.navigation{
+    width: 100%;
+    background-color: rgba(240, 128, 128, 0.253);
+
+    padding: 10px 0;
+    position: fixed;
+    margin-bottom: 20px;
+}
+.navi-bar{
+    align-items: center;
+    justify-content: space-between;
+}
+.navi-bar .logo-color{
+    color: #5439F8;
+}
+.navi-bar h1{
+    font-size: 1.2rem;
+}
+.navi-bar ul{
+    align-items: center;
+
+}
+.navigation .navi-bar li{
+    padding-left: 20px;
+    list-style-type: none;
+}
+.navigation .navi-bar li a{
+    text-decoration: none;
+    color: cyan;
+    font-size: 1rem;
+    transition: all 0.3s linear;
+}
+.navigation .navi-bar li a:hover{
+    border-left: 2px solid brown;
+    border-bottom:2px solid brown;
+    padding: 2px;
+    color: #5439F8;
+}
+
+.navi-bar ul li .button {
+    color: #f1f1f1;
+    border-radius: 3px;
+
+}
+.navi-bar ul li .button:hover{
+    background-color: #dbbddb;
+    color: #5439F8;
+}
+.menu-bar{
+    display: none;
+    width: 30%;
+}
+.menu-bar .menu-button{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.menu-button .fa{
+    font-size: 1.8rem;
+    color: #5439F8;
+
+
+}
+/*=========HEADER=SEWCTION===========*/
+.header{
+    width: 100%;
+    padding: 50px 0;
+}
+.header .bg-color{
+    background-color: #F6F5FC;
+    padding: 50px 30px ;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+.header .text{
+    width: 60%;
+
+}
+.header .text h1{
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+.header .text p{
+    padding: 20px 0;
+    font-size: 1rem;
+    line-height: 22px;
+    padding-right: 35px;
+    font-weight: 300;
+}
+.header .text .v-button{
+    border-radius: 22px;
+}
+.noHover{
+    pointer-events: none;
+
+}
+
+.header .image{
+    width: 40%;
+}
+.header .image img{
+    width: 100%;
+}
+/*========FACILITIES=======*/
+.facilities{
+    width: 100%;    
+    padding: 50px 0;
+}
+.facilities .content-box{
+    justify-content: space-between;
+    text-align: center;
+}
+.content-box .box{
+    width: 30%;
+    padding: 10px;
+}
+.content-box .box h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1.3rem 0;
+}
+.content-box .box p{
+    padding-bottom: 1rem;
+}
+/*=============ABOUT=SECTION=============*/
+.about{
+    width: 100%;
+    padding: 50px 0;
+}
+.about .about-content{
+    justify-content: space-between;
+}
+.about-content .about-left{
+    width: 50%;
+    opacity: 0.9;
+
+}
+.about-left .title{
+    text-align: left;
+}
+.about-left h2{
+    font-weight: 400;
+    padding-top: 10px;  
+    font-size: 1.8rem;
+    /*
+    border-bottom: 2px solid #5439F8;
+    */
+}
+
+.about-content .about-right{
+    width: 50%;
+}
+.about-content .about-right img{
+    width: 100%;
+}
+/*============SERVICE-SECTION=======*/
+.service-section{
+    width: 100%;
+    padding: 50px 0;
+    background-color: #EEF1F9;
+}
+.service-section h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 20px 0;  
+    text-align: center;
+}
+.first-row{
+    width: 100%;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+.first-row .seo{
+    width: 30%;
+    text-align: center;
+
+}
+.first-row .image{
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 1px 1px 7px rgba(1, 1, 17, 0.432);
+
+}
+.first-row .image img{
+    width: 100%;
+    display: block;
+}
+.first-row .seo h1{
+    padding: 15px 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.first-row .seo p{
+    color: darkgray;
+}
+/*=======CONTACT-SECTION======*/
+.email-section{
+    width: 100%;
+    padding: 50px 0;
+    background-image: url(../img/bg_pattern.svg);
+    background-position: center center;
+    background-size:cover ;
+    background-color: #5439F8;
+    text-align: center;
+}
+.email-section h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #dbbddb;
+    padding: 20px 0;
+}
+.inside-button{
+    width: 60%;
+    max-width: 500px;
+    margin: 0 auto;
+    position:relative;
+    margin-bottom:10px;
+}
+.inside-button input{
+    width: 100%;
+    padding:10px 7px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    
+}
+.inside-button .form-button{
+    background-color: green;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    position:absolute;
+    right: 2px;
+    top: 2px;
+}   
+.inside-button .form-button:hover{
+    background-color: #dbbddb;
+    color: green;
+}
+/*========PRICE-PLAN=========*/
+.price{
+    width: 100%;
+    padding: 100px 0;
+    background-color: #f1f1f1;
+
+}
+
+   
+.price .space{
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.price .plan{
+    width: 30%;
+   
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 10px 20px 10px;
+    box-shadow: 5px 5px 5px gray;
+
+}
+.plan h1{
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+.price .basic{
+    background-color: #fff;
+    box-shadow: 5px 5px 5px gray;
+
+}
+.price .standar{
+    background-color: #5439F8;
+    box-shadow: 5px 5px 5px gray;
+}
+.price .standar h1{
+    color: #f1f1f1;
+    
+}
+.price .standar p{
+    color: #f1f1f1;
+}
+.price .professional{
+    background-color: #fff;
+}
+.price .plan p{
+    font-size: 1rem;
+    padding: 12px 0;
+}
+.plan .border{
+    border-top: 1px solid darkgray;
+  
+}
+.plan .dollor{
+    font-size: 1rem;
+}
+.price .plan .my-style{
+    color: darkgray;
+
+}
+.different{
+    color: #5439F8;
+    font-size: 1.2rem;
+}
+.plan .border .block-button{
+    display: block;
+    background-color: #a9a9a998;    
+    color: #fff;
+    margin: 0 10px;
+}
+.plan .border .block-button1{
+    display: block;
+    background-color: #f1f1f1;
+    color: #5439F8 ;
+    margin: 0 10px;
+
+}
+/*========BRAND========*/
+.brand{
+    width: 100%;
+    padding: 50px 0;
+    background-color: #5439F8;
+    background-image: url(../img/bg_pattern.svg);
+    background-size: cover;
+    background-position: center center;
+}
+.brand .brand-content{
+    width: 60%;
+    padding: 20px;
+    color: #f1f1f1;
+
+}
+.brand .brand-content h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 150px;
+}
+
+.brand .brand-content ul{
+    padding: 20px 0 20px 30px;
+
+
+}
+.brand-content p{
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+.brand-content ul li h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 10px;
+
+}
+.brand-content ul li p{
+    padding-left: 20px;
+}
+
+.brand .image{
+    width: 40%;
+    background-size: 100%;
+    padding: 40px 10px;
+}
+.brand .image img{
+    width: 100%;
+}
+/*=======BLOG-SECTION=======*/
+.blog-section{
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f1f1f1;
+
+}
+.blog-section .blog-content{
+    padding: 20px 0;
+    justify-content: space-between;
+}
+.blog-section .blog-content .blogs{
+    width: 30%;
+    box-shadow: -10px 5px 5px gray;
+
+}
+.blog-section .blog-content .text{
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 0 0 5px 5px ;
+}
+.blog-content .blogs img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.blog-content .blogs h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.blog-content .blogs p .date{
+    color: #5439F8;
+}
+.blog-section .center-button{
+   text-align: center;
+}
+/*============FOOOTER============*/
+.footer{
+    width: 100%;
+    padding: 50px 0;
+    background-image: url(../img/world_pattern.svg);
+    background-color:#2D2B3A ;
+    background-position: center;
+}
+.footer .footer-box{
+    width: 25%;
+    padding: 10px;
+}
+.footer .footer-box p{
+    text-align: left;
+
+}
+.footer .footer-box h1{
+    color: #f1f1f1;
+    font-weight: 300;
+}
+.footer a{
+    text-decoration: none;
+}
+.footer-box ul li {
+    line-height: 30px;
+    list-style-type: none;
+}
+.footer-box form input{
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+.footer-box p{
+    line-height: 24px;
+}
+.email-button{
+    padding: 8px 15px;
+    width: 100%;    
+    background-color: seagreen;
+    color: #f1f1f1;
+    border: none;
+
+}
+.email-button:hover{
+    background-color: #dbbddb;
+    color: green;
+}
+.footer .copynote{
+    text-align: center;
+    font-size: 1rem;
+}
+.footer .copynote .seagreen{
+    color: seagreen;
+}
+@media only screen and (min-width:1270px) and (max-width:1920px){
+/*============COMMON-CLASSES===========*/
+
+html, body{
+    font-size: 20px;
+}
+.para{
+    line-height: 28px;
+    padding: 15px 0 20px 0;
+}
+.button{
+    font-size: 1rem;
+}
+.title{
+    font-size: 1.2rem;
+
+}
+.head{
+    font-size: 2rem;
+}
+
+/*===========NAVIGATION==============*/
+.navi-bar h1{
+    font-size: 2.2rem;
+}
+/*=========HEADER=SEWCTION===========*/
+.header .text p{
+    padding: 28px 0;
+    line-height: 28px;
+
+}
+/*========FACILITIES=======*/
+.content-box .box p{
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+}
+/*=============ABOUT=SECTION=============*/
+/*============SERVICE-SECTION=======*/
+
+/*=======CONTACT-SECTION======*/
+/*========PRICE-PLAN=========*/
+.price .plan p{
+    line-height: 40px;
+}
+/*========BRAND========*/
+/*=======BLOG-SECTION=======*/
+/*============FOOOTER============*/
+.footer-box p{
+    line-height: 36px;
+}
+}
+@media only screen and (max-width:991px){
+/*============COMMON-CLASSES===========*/
+.container{
+    width: 85%;
+}
+/*===========NAVIGATION==============*/
+.navigation .navi-bar li{
+    padding-left: 15px;
+}
+/*=========HEADER=SEWCTION===========*/
+.header .text h1{
+    font-size: 1.8rem;
+}
+/*========FACILITIES=======*/
+.content-box .box{
+    width: 33%;
+}
+.content-box .box h1{
+    padding: 20px 0 0 0;
+}
+/*=============ABOUT=SECTION=============*/
+/*============SERVICE-SECTION=======*/
+.first-row .seo{
+    width: 33%;
+}
+/*=======CONTACT-SECTION======*/
+/*========PRICE-PLAN=========*/
+.price .plan{
+    width: 32%;
+}
+.price .plan p{
+    padding-bottom: 10px;
+}
+/*========BRAND========*/
+.brand .brand-content h1{
+    padding-right: 0;
+}
+/*=======BLOG-SECTION=======*/
+.blog-content .blogs h2{
+    font-size: 1rem;
+
+}
+/*============FOOOTER============*/
+.footer{
+    padding: 30px 0;
+}
+}
+@media only screen and (max-width:768px){
+/*============COMMON-CLASSES===========*/
+
+/*===========NAVIGATION==============*/
+
+.navi-bar ul{
+    display: none;
+
+}
+.menu-bar{
+    display: flex;
+    justify-content: flex-end;
+
+}
+/*=========HEADER=SEWCTION===========*/
+.header .text h1{
+    font-size: 1.2rem;
+}
+/*========FACILITIES=======*/
+.facilities{
+    padding: 0 ;
+}
+.content-box .box{
+    width: 100%;
+    padding: 20px 100px;
+}
+/*=============ABOUT=SECTION=============*/
+.about-content .about-left{
+    width: 100%;
+}
+.about-content .about-right{
+    width: 100%;
+    }
+/*============SERVICE-SECTION=======*/
+.first-row .seo{
+    width: 50%;
+    padding: 5px;
+
+}
+/*=======CONTACT-SECTION======*/
+/*========PRICE-PLAN=========*/
+.price .plan{
+    width: 51%;
+    margin: 0 auto 20px auto;
+
+}
+.price{
+    padding: 30px 0;
+}
+/*========BRAND========*/
+.brand .brand-content{
+    width: 100%;
+}
+.brand .image{
+    width: 100%;
+}
+/*=======BLOG-SECTION=======*/
+.blog-section .blog-content{
+    justify-content: center;
+}
+.blog-section .blog-content .blogs{
+    width: 75%;
+    margin-bottom: 20px;
+}
+/*============FOOOTER============*/
+.footer .footer-box{
+    width: 50%;
+}
+}
+@media only screen and (max-width:576px){
+/*============COMMON-CLASSES===========*/
+.head{
+    font-size: 1.5rem;
+}
+.all-head{
+    font-size: 1.2rem;
+}
+
+/*===========NAVIGATION==============*/
+/*=========HEADER=SEWCTION===========*/
+.header .text{
+    width: 100%;
+    padding-bottom: 50px;
+}
+.header .image{
+    width: 100%;
+
+}
+/*========FACILITIES=======*/
+.content-box .box{
+    padding: 20px 50px;
+}
+.content-box .box h1{
+    font-size: 1.2rem;
+}
+/*=============ABOUT=SECTION=============*/
+.about-left h2{
+    font-size: 1.2rem;
+}
+/*============SERVICE-SECTION=======*/
+.service-section h2{
+    font-size: 1.2rem;
+}
+.first-row .seo h1{
+    font-size: 1.2rem;
+    padding:10px 0 0 0;
+}
+.inside-button{
+    width: 75%;
+}
+.inside-button input{
+    padding: 7px 5px;
+}
+.inside-button .form-button{
+    font-size: 0.8rem;
+    top: 0;
+    right: 0;
+}
+/*=======CONTACT-SECTION======*/
+/*========PRICE-PLAN=========*/
+.price .plan{
+    width: 65%;
+}
+/*========BRAND========*/
+/*=======BLOG-SECTION=======*/
+/*============FOOOTER============*/
+.footer .footer-box{
+    width: 100%;
+}
+}
+@media only screen and (max-width:380px){
+/*============COMMON-CLASSES===========*/
+.container{
+    width: 90%;
+}
+.all-head{
+    padding-top: 10px;
+}
+/*===========NAVIGATION==============*/
+.menu-bar{
+    width: 50%;
+    
+}
+.menu-button .fa{
+    font-size: 1.5rem;
+}
+/*=========HEADER=SEWCTION===========*/
+
+/*========FACILITIES=======*/
+.content-box .box{
+    padding: 20px 0;
+    border-bottom: 1px solid darkgray;
+}
+.first-row .seo{
+    width: 100%;
+    padding-top: 20px;
+    border-bottom: 1px solid darkgray;
+}
+/*=============ABOUT=SECTION=============*/
+/*============SERVICE-SECTION=======*/
+
+/*=======CONTACT-SECTION======*/
+/*========PRICE-PLAN=========*/
+.price .plan{
+    width: 80%;
+}
+/*========BRAND========*/
+.brand .brand-content h1{
+    font-size: 1.2rem;
+}
+.brand-content p{
+    padding-right: 0;
+}
+.brand ul li h2{
+    font-size: 1.2rem;
+}
+/*=======BLOG-SECTION=======*/
+.blog-section .blog-content .blogs{
+    width: 90%;
+}
+/*============FOOOTER============*/
+.footer .footer-box{
+    border-bottom: 1px solid darkgray;
+}
+}
