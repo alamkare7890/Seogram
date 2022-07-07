@@ -7,6 +7,20 @@ $(document).ready(function () {
     
     })
 
+    
+   
+    $(window).scroll(function () {
+
+    
+        if ($(this).scrollTop() > 50) {
+            $('#menu').addClass('nav-menu');
+        } else {
+            $('#menu').removeClass('nav-menu');
+        }
+
+    
+        
+    })
 
 
 })

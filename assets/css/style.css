@@ -42,42 +42,41 @@ html, body{
     text-align: center;
 }
 .button{
-    padding: 8px 15px;
+    padding: 12px 20px;
     text-decoration: none;
     font-size: 0.9rem;
     border-radius: 3px;
     cursor: pointer;
-    position: relative;
     z-index:1;
     transition: all 0.3s ease;
   
 }
-.button:hover{
-    background-color: #dbbddb;
-    color: #5439F8;
-
-}
-
-.button::before{
-    content: " ";
-    width: 0;
-    height: 100%;
-    background-color: #5439F8;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
+.free-btn{
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
     border-radius: 3px;
+    cursor: pointer;
+    z-index:1;
     transition: all 0.3s ease;
-
 }
-
-.button:hover:before{
+.free-btn:hover{
+    color: #5439F8;
+    background-color: #EEF1F9;
+    border: 1px solid #5439F8;
+}
+.read-more{
     background-color: #5439F8;
-    width: 100%;
-    opacity: 0.4;
+    color: #EEF1F9;
+    transition: all 0.3s ease;
+}
+.read-more:hover{
+    letter-spacing: 2px;
+    transform: scale(1.1);
 
 }
+
+
 
 
 
@@ -88,10 +87,7 @@ html, body{
 /*===========NAVIGATION==============*/
 .navigation{
     width: 100%;
-    background-color: rgba(240, 128, 128, 0.253);
-
     padding: 10px 0;
-    position: fixed;
     margin-bottom: 20px;
 }
 .navi-bar{
@@ -114,15 +110,41 @@ html, body{
 }
 .navigation .navi-bar li a{
     text-decoration: none;
-    color: cyan;
+    color: #5439F8;
     font-size: 1rem;
     transition: all 0.3s linear;
+    position: relative
+;
 }
-.navigation .navi-bar li a:hover{
-    border-left: 2px solid brown;
-    border-bottom:2px solid brown;
-    padding: 2px;
-    color: #5439F8;
+.navigation .navi-bar li a::before, .navigation .navi-bar li a::after{
+    content: "";
+    height: 5%;
+    position: absolute;
+    background-color: #e60ae6;
+    transition: all 0.3s linear;
+
+}
+
+.navigation .navi-bar li a::before{
+    top: 0;
+    left: 0;
+    width: 0;    
+
+}
+.navigation .navi-bar li a::after{
+    bottom: 0;
+    right: 0;
+    width: 0;    
+
+}
+.navigation .navi-bar li a:hover:before{
+    width: 100%;
+
+}
+.navigation .navi-bar li a:hover:after{
+    width: 100%;
+
+
 }
 
 .navi-bar ul li .button {
@@ -138,6 +160,10 @@ html, body{
     display: none;
     width: 30%;
 }
+.nav-menu{
+    position: fixed;
+    background-color: #5339f848;
+}
 .menu-bar .menu-button{
     text-decoration: none;
     color: #000;
@@ -148,6 +174,10 @@ html, body{
     font-size: 1.8rem;
     color: #5439F8;
 
+
+}
+.items-color{
+    color: #fff;
 
 }
 .ana-box{
@@ -191,9 +221,12 @@ html, body{
 }
 .header .text .v-button{
     border-radius: 22px;
+    background-color: #5439F8;
+    color: #EEF1F9;
 }
-.noHover{
-    pointer-events: none;
+.header .text .v-button:hover
+{   
+    box-shadow: 0 0 15px 8px #5439F8;
 
 }
 
@@ -219,10 +252,10 @@ html, body{
 .content-box .box h1{
     font-size: 1.5rem;
     font-weight: 500;
-    padding: 1.3rem 0;
+    padding-top: 1.3rem;
 }
 .content-box .box p{
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 /*=============ABOUT=SECTION=============*/
 .about{
@@ -320,28 +353,33 @@ html, body{
     margin: 0 auto;
     position:relative;
     margin-bottom:10px;
+
 }
 .inside-button input{
     width: 100%;
-    padding:10px 7px;
-    font-size: 16px;
+    padding:15px 10px;
+    font-size: 15px;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
     border: none;
     
 }
 .inside-button .form-button{
     background-color: green;
     border: none;
-    border-radius: 3px;
+    padding: 15px 20px;
+    border-radius: 0 3px 3px 0;
     font-size: 15px;
     position:absolute;
-    right: 2px;
-    top: 2px;
+    right: 0;
+    top: 0;
+    color: #EEF1F9;
+    transform: translateX(0);
+    transition: all 0.4s ease;
 }   
 .inside-button .form-button:hover{
-    background-color: #dbbddb;
     color: green;
+    background-color: #EEF1F9;
 }
 /*========PRICE-PLAN=========*/
 .price{
@@ -410,14 +448,29 @@ html, body{
 .plan .border .block-button{
     display: block;
     background-color: #a9a9a998;    
-    color: #fff;
+    color: #5439F8;
     margin: 0 10px;
+    border: 2px solid #a9a9a998;
+
 }
 .plan .border .block-button1{
     display: block;
     background-color: #f1f1f1;
     color: #5439F8 ;
     margin: 0 10px;
+    border: 2px solid #EEF1F9;
+
+}
+.plan .border .block-button:hover{
+    background-color: #5439F8;
+    color: #EEF1F9;
+    border: 2px solid #5439F8;
+
+}
+.plan .border .block-button1:hover{
+    background-color: #5439F8;
+    color: #EEF1F9;
+    border: 2px solid #EEF1F9;
 
 }
 /*========BRAND========*/
@@ -820,12 +873,12 @@ html, body{
     width: 75%;
 }
 .inside-button input{
-    padding: 7px 5px;
+    padding: 11px 7px;
 }
 .inside-button .form-button{
     font-size: 0.8rem;
-    top: 0;
-    right: 0;
+    padding: 12px  15px;
+    
 }
 /*=======CONTACT-SECTION======*/
 /*========PRICE-PLAN=========*/
