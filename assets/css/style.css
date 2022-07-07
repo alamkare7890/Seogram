@@ -598,6 +598,9 @@ html, body{
 .footer-box p{
     line-height: 24px;
 }
+.footer-box ul li a:hover{
+    color: #fff;
+}
 .email-button{
     padding: 8px 15px;
     width: 100%;    
