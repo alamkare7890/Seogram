@@ -43,10 +43,8 @@ html, body{
 }
 .button{
     padding: 8px 15px;
-    background-color: #5439F8;
     text-decoration: none;
     font-size: 0.9rem;
-    color: #f1f1f1;
     border-radius: 3px;
     cursor: pointer;
     position: relative;
@@ -150,6 +148,19 @@ html, body{
     font-size: 1.8rem;
     color: #5439F8;
 
+
+}
+.ana-box{
+    padding: 5px 10px;
+}
+/*
+.ana-box{
+    width: 20%;
+}
+*/
+.analysis-button{
+    background-color: #5439F8;
+    color: #f1f1f1;
 
 }
 /*=========HEADER=SEWCTION===========*/
@@ -658,13 +669,57 @@ html, body{
 
 .navi-bar ul{
     display: none;
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    flex-direction: column;
+    background-color: #f1f1f16b;
+    width: 200px;
+    padding: 15px 0;
+    /*padding: 15px;*/
+    border-radius: 25px;
+    border-left: 20px solid #5439F8;
+    border-top: 20px solid #f1f1f16b ;
+    border-bottom: 20px solid #f1f1f16b;
+    align-items: flex-start;
+}
+.navigation .navi-bar li{
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #5439F8;
+    width: 100px;
+    border-radius: 0 25px 25px 0;
 
 }
+.navigation .navi-bar li a{
+    color: #f1f1f1;
+
+}
+.ana-box{
+    display: none;
+    margin-top: 20px;
+    color: #f1f1f1;
+}
+/*
+.navi-bar h1{
+    width: 10%;
+}
+*/
 .menu-bar{
+    width: 25%;
     display: flex;
     justify-content: flex-end;
 
 }
+
+/*
+.ana-box{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+*/
 /*=========HEADER=SEWCTION===========*/
 .header .text h1{
     font-size: 1.2rem;
@@ -738,6 +793,9 @@ html, body{
 .header .image{
     width: 100%;
 
+}
+.menu-bar{
+    width: 40%;
 }
 /*========FACILITIES=======*/
 .content-box .box{
